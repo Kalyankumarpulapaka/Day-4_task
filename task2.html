@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+/*Print odd numbers in an array*/
+
+var arr=[1,2,3,4,5,6,7,8,9,10];
+var result=arr.filter((e,i)=> e%2!=0)
+console.log(result)
+
+
+
+/*Convert all the strings to title caps in a string array*/
+
+var arr1 = ["rahul", "ravi", "arjun", "charan", "rushi", "vijay"];
+      var titleCapsArr = arr1.map((word)=> word.charAt(0).toUpperCase() + word.slice(1));
+
+      console.log(titleCapsArr);
+
+
+/*Sum of all numbers in an array*/
+
+arr=[1,2,3,4,5,6,7,8,9,10];
+var sum=arr.reduce((a,c)=>a+c)
+console.log(sum);
+
+/*Return all the prime numbers in an array*/
+
+var numbers=[1,2,3,4,5,6,7,8,9,10];
+const primeNumbers = numbers.filter((number)=>{
+  for (let i = 2; i < number; i++) {
+    if (number % i === 0) {
+      return false;
+    }
+  }
+  return true;
+});
+
+console.log(primeNumbers);
+
+
+/*Return all the palindromes in an array*/
+
+var words = ["radar", "hello", "level", "world", "madam"];
+
+const palindromes = (() => {
+    return words.filter(word => {
+        const reversedWord = word.split('').reverse().join('');
+        return word === reversedWord;
+    });
+})();
+
+console.log(palindromes);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>
